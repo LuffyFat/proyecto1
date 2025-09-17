@@ -1,4 +1,4 @@
-# Proyecto Files
+# Proyecto Files & Pasta
 
 ## Objetivo
 El objetivo de esta práctica es trabajar en equipo para desarrollar una aplicación en Java en modo terminal, utilizando herramientas colaborativas de GitHub (Issues, Projects, Pull Requests y ramas). Se pondrá énfasis en el uso de las clases `Files` y `Path` para la manipulación de archivos y directorios.
