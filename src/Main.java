@@ -25,7 +25,7 @@ public class Main {
                 System.err.println(e);
             }
         }while (!ruta.equals(""));
-        System.out.println("Fi del programa");
+        System.out.println("Fin del programa");
     }
     public static void mostraRuta(File f) throws FileNotFoundException{
         if (!f.exists())
