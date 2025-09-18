@@ -4,17 +4,17 @@ import java.nio.file.Files;
 import java.util.Scanner;
 
 class Menu {
-    String menu =   "******************************" +
-                    " |  -  Elige una opción  -  | " +
-                    " |  1. Crea un directorio   | " +
-                    " |  2. Lee un archivo       | " +
-                    " |  3. Escribir contenido   | " +
-                    " |  4. Eliminar archivo/dir | " +
-                    " |  5. Comprobar si un      | " +
-                    " |    archivo/dir existe    | " +
-                    " |  6. Listar contenido dir | ";
+     String menu =   "******************************\n" +
+                    " |  -  Elige una opción  -  | \n" +
+                    " |  1. Crea un directorio   | \n" +
+                    " |  2. Lee un archivo       | \n" +
+                    " |  3. Escribir contenido   | \n" +
+                    " |  4. Eliminar archivo/dir | \n" +
+                    " |  5. Comprobar si un      | \n" +
+                    " |    archivo/dir existe    | \n" +
+                    " |  6. Listar contenido dir | \n";
 
-    void showMenu() {
+     void showMenu() {
         System.out.println(menu);
     }
 
@@ -31,9 +31,17 @@ class Menu {
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Dime un directorio");
-        String directorio = scanner.nextLine();
+        Menu menu = new Menu();
+        while (true) {
+
+            menu.showMenu();
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Dime un directorio");
+            String directorio = scanner.nextLine();
+
+        }
+
 
 
 
