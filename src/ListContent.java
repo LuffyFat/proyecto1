@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class Main {
+public class ListContent {
     public static void main(String[] args) {
         String ruta = "";
         Scanner scanner = new Scanner(System.in);
