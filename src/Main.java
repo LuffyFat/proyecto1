@@ -1,15 +1,23 @@
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 
 import java.util.Scanner;
 
 public class Main {
+    public static void writeToAnExistingFile (File file){
+        Scanner scanner = new Scanner(System.in);
 
-    public static void deleteFileAndDirectory(File f){
-        if (f.exists() && f.delete()){
-            System.out.println("Archivo eliminado correctamente: " + f);
-        } else {
-            System.out.println("No se pudo eliminar el archivo: " + f);
+        String text = scanner.nextLine();
+
+        try {
+            FileWriter writer = new FileWriter(file, true);
+            writer.write(text);
+
+            System.out.println("Texto añadido con éxito " + file);
+        } catch (Exception e){
+            System.out.println("Error " + e.getMessage());
         }
     }
 
