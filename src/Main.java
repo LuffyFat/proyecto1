@@ -40,6 +40,8 @@ public class Main {
             System.out.println("Dime un directorio");
             String directorio = scanner.nextLine();
 
+            // ComprobarArchivo.checkFiles()
+
         }
 
 

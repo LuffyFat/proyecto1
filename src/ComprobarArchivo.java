@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ComprobarArchivo {
 
-    static boolean checkFiles(File directory, File file) {
+    public static boolean checkFiles(File directory, File file) {
         try {
             if (!directory.isDirectory()) {
                 throw new IllegalArgumentException("La ruta no es un directorio");
