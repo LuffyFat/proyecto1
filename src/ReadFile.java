@@ -2,9 +2,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class readFile {
+public class ReadFile {
 
-    static void readFile(File file ){
+    public static void readFile(File file ){
         try(Scanner fileReader = new Scanner(file)){
             while (fileReader.hasNextLine()){
                 String data = fileReader.nextLine();
