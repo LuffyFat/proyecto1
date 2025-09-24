@@ -1,36 +1,24 @@
-
-class Menu {
-    String menu =   "******************************" +
-                    " |  -  Elige una opción  -  | " +
-                    " |  1. Crea un directorio   | " +
-                    " |  2. Lee un archivo       | " +
-                    " |  3. Escribir contenido   | " +
-                    " |  4. Eliminar archivo/dir | " +
-                    " |  5. Comprobar si un      | " +
-                    " |    archivo/dir existe    | " +
-                    " |  6. Listar contenido dir | ";
-
-    void showMenu() {
-        System.out.println(menu);
-    }
-
-}
-
-public class Main {
-
-    public static void main(String[] args) {
-
-
-
-=======
 import java.io.File;
 import java.nio.file.Files;
 
 import java.util.Scanner;
 
-public class Main {
+class Menu {
+     String menu =   "******************************\n" +
+                    " |  -  Elige una opción  -  | \n" +
+                    " |  1. Crea un directorio   | \n" +
+                    " |  2. Lee un archivo       | \n" +
+                    " |  3. Escribir contenido   | \n" +
+                    " |  4. Eliminar archivo/dir | \n" +
+                    " |  5. Comprobar si un      | \n" +
+                    " |    archivo/dir existe    | \n" +
+                    " |  6. Listar contenido dir | \n";
 
-    public static void deleteFileAndDirectory(File f){
+     void showMenu() {
+        System.out.println(menu);
+    }
+
+    static void deleteFileAndDirectory(File f){
         if (f.exists() && f.delete()){
             System.out.println("Archivo eliminado correctamente: " + f);
         } else {
@@ -38,11 +26,23 @@ public class Main {
         }
     }
 
+}
+
+public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Dime un directorio");
-        String directorio = scanner.nextLine();
+        Menu menu = new Menu();
+        while (true) {
+
+            menu.showMenu();
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Dime un directorio");
+            String directorio = scanner.nextLine();
+
+        }
+
+
 
 
     }
