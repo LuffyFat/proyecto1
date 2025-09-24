@@ -1,11 +1,9 @@
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Files;
 
 import java.util.Scanner;
 
-public class Main {
+public class EscribirArchivo{
     public static void writeToAnExistingFile (File file){
         Scanner scanner = new Scanner(System.in);
 
