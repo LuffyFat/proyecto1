@@ -1,9 +1,8 @@
 import java.io.File;
-import java.nio.file.Files;
 
 import java.util.Scanner;
 
-public class Main {
+public class EliminarArchivoDirectorio {
 
     public static void deleteFileAndDirectory(File f){
         if (f.exists() && f.delete()){
