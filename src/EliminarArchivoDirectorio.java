@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class EliminarArchivoDirectorio {
 
-    public static void deleteFileAndDirectory(File f){
+    public static void deleteFileDirectory(File f){
         if (f.exists() && f.delete()){
             System.out.println("Archivo eliminado correctamente: " + f);
         } else {
