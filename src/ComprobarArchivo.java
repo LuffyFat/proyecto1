@@ -27,18 +27,4 @@ public class ComprobarArchivo {
         return false;
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Ruta del directorio: ");
-        String route = scanner.nextLine();
-        File directory = new File(route);
-
-        System.out.print("Nombre del archivo a buscar: ");
-        String fileName = scanner.nextLine();
-        File search = new File(directory, fileName);
-
-        boolean exists = checkFiles(directory, search);
-        System.out.println("¿Existe el archivo en el directorio?: " + exists);
-    }
 }

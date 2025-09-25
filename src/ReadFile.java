@@ -15,13 +15,4 @@ public class ReadFile {
             System.out.println("El archivo no se ha encontrado.");
         }
     }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String route = scanner.nextLine();
-        File file = new File(route);
-
-        readFile(file);
-
-    }
 }
