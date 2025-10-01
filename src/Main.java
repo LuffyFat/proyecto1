@@ -38,28 +38,26 @@ public class Main {
                 }
                 case 2 -> {
                     System.out.println("Introduce la ruta del archivo que quieres leer");
-                    String route = scanner.nextLine();
-                    File file = new File(route);
-
+                    File file = new File(scanner.nextLine());
                     ReadFile.readFile(file);
-
                     System.out.println();
                 }
                 case 3 -> {
                      System.out.println("Introduce la ruta del archivo en el que quieres añadir algo: ");
                      EscribirArchivo.writeToAnExistingFile(new File(Scanner.nextLine()));
+                     System.out.println();
                 }
                 case 4 -> {
-
+                     System.out.println("Introduce la ruta del archivo que quieras eliminar: ");
+                     EliminarArchivoDirectorio.deleteFileDirectory(new File(Scanner.nextLine()));
+                     System.out.println();
                 }
                 case 5 -> {
                     System.out.print("Ruta del directorio: ");
-                    String route = scanner.nextLine();
-                    File directory = new File(route);
+                    File directory = new File(scanner.nextLine());
 
                     System.out.print("Nombre del archivo a buscar: ");
-                    String fileName = scanner.nextLine();
-                    File search = new File(directory, fileName);
+                    File search = new File(directory, scanner.nextLine());
 
                     boolean exists = ComprobarArchivo.checkFiles(directory, search);
                     System.out.println("¿Existe el archivo en el directorio?: " + exists);
