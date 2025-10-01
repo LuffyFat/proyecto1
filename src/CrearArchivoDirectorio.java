@@ -5,20 +5,8 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class CrearArchivoDirectorio {
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
 
-        CrearArchivoDirectorio CAR = new CrearArchivoDirectorio();
-        System.out.println("Que quieres crear");
-        System.out.println("***********");
-        System.out.println("[1]Directorio");
-        System.out.println("[2]Archivo");
-        System.out.println("***********");
-        int a = sc.nextInt();
-        CAR.CrearArchivoDirectorio(a);
-    }
-
-    public void CrearArchivoDirectorio(int sw) {
+    public void crearArchivoDirectorio(int sw) {
         Scanner sc = new Scanner(System.in);
         String scan = sc.nextLine();
         File f = new File(scan);
