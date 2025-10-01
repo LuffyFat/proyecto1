@@ -46,7 +46,8 @@ public class Main {
                     System.out.println();
                 }
                 case 3 -> {
-
+                     System.out.println("Introduce la ruta del archivo en el que quieres añadir algo: ");
+                     EscribirArchivo.writeToAnExistingFile(new File(Scanner.nextLine()));
                 }
                 case 4 -> {
 
