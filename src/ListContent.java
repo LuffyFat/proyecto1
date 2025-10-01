@@ -3,30 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 public class ListContent {
-    public static void main(String[] args) {
-        String ruta = "";
-        Scanner scanner = new Scanner(System.in);
-
-        do{
-            try{
-                System.out.println("\n---------------------");
-                System.out.println("Introduce una ruta");
-                System.out.println("\n---------------------");
-                System.out.println("Ruta: ");
-
-                ruta = scanner.nextLine();
-
-                if(!ruta.equals("")){
-                    File fitxer = new File(ruta);
-                    mostraRuta(fitxer);
-                }
-
-            }catch (FileNotFoundException e){
-                System.err.println(e);
-            }
-        }while (!ruta.equals(""));
-        System.out.println("Fin del programa");
-    }
+    
     public static void mostraRuta(File f) throws FileNotFoundException{
         if (!f.exists())
             throw new FileNotFoundException("ERROR - Ruta no valida");
