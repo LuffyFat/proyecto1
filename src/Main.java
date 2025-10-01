@@ -34,7 +34,13 @@ public class Main {
 
             switch(txt) {
                 case 1 -> {
-
+                    System.out.println("Que quieres crear");
+                    System.out.println("***********");
+                    System.out.println("[1]Directorio");
+                    System.out.println("[2]Archivo");
+                    System.out.println("***********");
+                    int a = sc.nextInt();
+                    CrearArchivoDirectorio.crearArchivoDirectorio(a);
                 }
                 case 2 -> {
                     System.out.println("Introduce la ruta del archivo que quieres leer");
