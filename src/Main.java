@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.nio.file.Files;
 
 import java.util.Scanner;
@@ -39,7 +40,7 @@ public class Main {
                     System.out.println("[1]Directorio");
                     System.out.println("[2]Archivo");
                     System.out.println("***********");
-                    int a = sc.nextInt();
+                    int a = scanner.nextInt();
                     CrearArchivoDirectorio.crearArchivoDirectorio(a);
                 }
                 case 2 -> {
@@ -50,12 +51,12 @@ public class Main {
                 }
                 case 3 -> {
                      System.out.println("Introduce la ruta del archivo en el que quieres añadir algo: ");
-                     EscribirArchivo.writeToAnExistingFile(new File(Scanner.nextLine()));
+                     EscribirArchivo.writeToAnExistingFile(new File(scanner.nextLine()));
                      System.out.println();
                 }
                 case 4 -> {
                      System.out.println("Introduce la ruta del archivo que quieras eliminar: ");
-                     EliminarArchivoDirectorio.deleteFileDirectory(new File(Scanner.nextLine()));
+                     EliminarArchivoDirectorio.deleteFileDirectory(new File(scanner.nextLine()));
                      System.out.println();
                 }
                 case 5 -> {
@@ -85,8 +86,8 @@ public class Main {
                                    ListContent.mostraRuta(fitxer);
                               }
 
-                         }catch (FileNotFoundException e){
-                              System.err.println(e);
+                         } catch (FileNotFoundException e){
+                              System.err.println(e.getMessage());
                          }
                     }while (!ruta.equals(""));
                               }

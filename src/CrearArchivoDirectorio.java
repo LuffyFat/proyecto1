@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class CrearArchivoDirectorio {
 
-    public void crearArchivoDirectorio(int sw) {
+    public static void crearArchivoDirectorio(int sw) {
         Scanner sc = new Scanner(System.in);
         String scan = sc.nextLine();
         File f = new File(scan);
