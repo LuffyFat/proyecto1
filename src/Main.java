@@ -70,8 +70,26 @@ public class Main {
                     System.out.println();
                 }
                 case 6 -> {
+                     String ruta = "";
+                     do{
+                         try{
+                              System.out.println("\n---------------------");
+                              System.out.println("Introduce una ruta");
+                              System.out.println("\n---------------------");
+                              System.out.println("Ruta: ");
 
-                }
+                              ruta = scanner.nextLine();
+
+                              if(!ruta.equals("")){
+                                   File fitxer = new File(ruta);
+                                   ListContent.mostraRuta(fitxer);
+                              }
+
+                         }catch (FileNotFoundException e){
+                              System.err.println(e);
+                         }
+                    }while (!ruta.equals(""));
+                              }
 
             }
 
