@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class EscribirArchivo{
     public static void writeToAnExistingFile (File file){
         Scanner scanner = new Scanner(System.in);
-
+        
+        System.out.println("Escribe lo que quieres añadir: ");
         String text = scanner.nextLine();
 
         try {
